@@ -14,7 +14,6 @@ h1{
 
 h2{
     margin-left: 30px;
-    /* padding: 20px; */
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(66, 66, 66);
     font-weight: 50px;
@@ -36,22 +35,13 @@ h2{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    /* margin-top: 200px; */
     padding: 70px;
     
 }
 
-button{ 
-    border:0px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    padding: 10px; 
-    border-radius: 20px;
-    
-}
 
-#generate{
+
+.genButton{
     border:0px;
     background: rgb(167, 0, 0);
     color: white;
@@ -59,12 +49,20 @@ button{
     font-size: 20px;
     border-radius: 20px;
      padding: 10px 25px 10px 25px; 
+     cursor: pointer;
 
 }
 
-#copy{
+.copyButton{
     padding: 10px 25px 10px 25px; 
     background: rgb(167, 167, 167);
+    border:0px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px 25px 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 textarea{
