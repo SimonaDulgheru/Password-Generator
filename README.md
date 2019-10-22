@@ -20,8 +20,13 @@ PREVIEW
 
 ![Generated password](https://user-images.githubusercontent.com/48987979/67195016-19ad5000-f3f0-11e9-9579-6e65310a9620.jpg)
 
+![Copy Button active](https://user-images.githubusercontent.com/48987979/67273184-df0deb00-f4b5-11e9-9cc0-a28d1bd12f0a.jpg)
 
-This project will be updated with a responsive web application.
+Stack used
+
+Css Html and Javascript
+
+
 
 
 
