@@ -33,7 +33,18 @@ function randomPassword() {
     }
     document.querySelector("#gen-password").innerHTML = (pass);
 };
-randomPass();
+    // randomPass();
+
+
+    copyBtn.addEventListener(`click`,function(){
+        let copyPass = document.querySelector(`#gen-password`);
+        copyPass.select();
+        document.execCommand(`copy`);
+        alert(`Copied to clipboard`);
+
+    });
+
+
 
 
 
