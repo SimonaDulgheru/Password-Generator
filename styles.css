@@ -1,85 +1,101 @@
-body{
-    padding: 0px;
-    margin: auto;
-    background: rgb(218, 217, 217);
-}
 
 
-h1{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(66, 66, 66);
-    font-weight: 35px;
-}
 
-h2{
-    margin-left: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(66, 66, 66);
-    font-weight: 50px;
-}
+@media (min-width: 1000px) {
 
-.container{
-    display: flex;
-    flex-direction: column;
-    margin-left: 250px;
-    width: 900px;
-    height: 500px;
-    border-radius: 5px;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgb(143, 143, 143);
-}
-
-.buttons{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 70px;
+    body{
+        padding: 0px;
+        margin: auto;
+    }
     
-}
-
-
-
-.genButton{
-    border:0px;
-    background: rgb(167, 0, 0);
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    border-radius: 20px;
-     padding: 10px 25px 10px 25px; 
-     cursor: pointer;
-
-}
-
-.copyButton{
-    padding: 10px 25px 10px 25px; 
-    background: rgb(167, 167, 167);
-    border:0px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    padding: 10px 25px 10px 25px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-textarea{
-    height: 400px;
-    align-items: center;
-    width: 800px;
-    margin-left: 30px;
-    border: 4px dotted rgb(173, 173, 173);
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-#password{
-    border-style: 3px dotted grey;
     
+    h1{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(66, 66, 66);
+        font-weight: 35px;
+        margin-top: 20px;
+    }
+    
+    h2{
+        margin-left: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(66, 66, 66);
+        font-weight: 50px;
+        text-align: center;
+    }
+
+
+    
+    .container-desktop{
+        display: flex;
+        flex-direction: column;
+        margin-left: 300px;
+        margin-top: 60px;
+        width: 900px;
+        height: 450px;
+        border-radius: 5px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgb(143, 143, 143);
+       
+    }
+    
+    .desktop-2{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 30px;
+         padding: 20px 30px 30px 30px; 
+        
+    }
+    
+    
+    
+    .genButton{
+        border:0px;
+        background: rgb(167, 0, 0);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        border-radius: 20px;
+        padding: 10px 25px 10px 25px; 
+        cursor: pointer;
+    
+    }
+    
+    .copyButton{
+        padding: 10px 25px 10px 25px; 
+        background: rgb(167, 167, 167);
+        border:0px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding: 10px 25px 10px 25px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    
+    textarea{
+        height: 200px;
+        align-items: center;
+        width: 800px;
+        margin-left: 30px;
+        border: 4px dotted rgb(173, 173, 173);
+        border-radius: 20px;
+        padding: 50px 20px 10px 20px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+ 
+   
+  
 }
 

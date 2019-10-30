@@ -42,12 +42,12 @@ function choosePass(){
     }
 
     let lowerCase = confirm(`Would you like your password to have Lowercase letters?`);
-    let upperCase = confirm(` Would you like to add UpperCase letters as well?`);
+    let upperCase = confirm(` Do you want to add UpperCase letters as well?`);
     let numberspecialChar = confirm(`Any numbers and special characters to be included in your password?`);
     
     if(!upperCase && !numberspecialChar && lowerCase)
     {
-        str=randomPassword(charPass.lowerCase,num)
+        password=randomPassword(charPass.lowerCase,num)
     }
     else if(upperCase && !numberspecialChar && !lowerCase )
     {
