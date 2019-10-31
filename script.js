@@ -17,6 +17,20 @@ const textArea = document.querySelector(`#gen-password`);
 const copyBtn = document.querySelector(`#copy`);
 
 
+
+generateBtn.addEventListener(`mouseover`, function () {
+
+    if(!generateBtn.classList.contains(`button-mouse`))
+    {
+        generateBtn.classList.add(`button-mouse`);
+    }
+    else
+    {
+        generateBtn.classList.remove(`button-mouse`);
+    }
+});
+
+
 generateBtn.addEventListener(`click`, function () {
     
     userInput = prompt(`Please select your desired password length.The longer a password, the more secure it is. Type a number between 8 and 128.`);
@@ -102,6 +116,18 @@ function confirmPass(){
         choosePass();
     }
 }; 
+
+
+copyBtn.addEventListener(`mouseover`,function(){
+    if(!copyBtn.classList.contains(`copy-mouse`))
+    {
+        copyBtn.classList.add(`copy-mouse`);
+    }
+    else
+    {
+        copyBtn.classList.remove(`copy-mouse`);
+    }
+});
 
 copyBtn.addEventListener(`click`,function(){
     let copyPass = document.querySelector(`#gen-password`);
