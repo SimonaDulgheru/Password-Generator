@@ -9,8 +9,8 @@ const charPass = {
                 fullChar:`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&'()*+,-./:;<=>?@[ \ ]^_{|}~`,
                 lowerCase:`abcdefghijklmnoprstuvwxyz`,
                 upperCase:`ABCDEFGHIJKLMNOPQRSTUVWXYZ`,
-                numberspecialChar:`0123456789!"#$%&'()*+,-./:;<=>?@[]\^_{|}~`,
-                };
+                numbers: `0123456789`,
+                specialChar:`!"#$%&'(/)*+,-.:;<=>?@[\]^_{|}~`};
 
 const generateBtn = document.querySelector(`#generate`);
 const textArea = document.querySelector(`#gen-password`);
@@ -35,15 +35,16 @@ generateBtn.addEventListener(`click`, function () {
     
     userInput = prompt(`Please select your desired password length.The longer a password, the more secure it is. Type a number between 8 and 128.`);
    
-    if(choosePass() === false ){
+    if(choosePass() === false )
+        {
         userInput = prompt(`Please select your desired password length.The longer a password, the more secure it is. Type a number between 8 and 128.`);
         choosePass();
         textArea.randomPassword(charPass,num) ="";
-            }
-            else
-            {
-                randomPassword(charPass,num);
-            }
+        }
+     else
+        {
+        randomPassword(charPass,num);
+        }
            
 });
 
@@ -52,53 +53,48 @@ function choosePass(){
     num = Number(userInput);
     while (Number(userInput) < minChar || Number(userInput) > maxChar) 
     {
-        userInput = prompt(`Invalid number. Please type a number between 8 and 128.`);
+        userInput = prompt(`Invalid number! Please type a number between 8 and 128.`);
     }
 
-    let lowerCase = confirm(`Would you like your password to have Lowercase letters?`);
+    let lowerCase = confirm(`Would you like your password to have LowerCase letters?`);
     let upperCase = confirm(` Do you want to add UpperCase letters as well?`);
-    let numberspecialChar = confirm(`Any numbers and special characters to be included in your password?`);
-    
-    if(!upperCase && !numberspecialChar && lowerCase)
-    {
-        password=randomPassword(charPass.lowerCase,num)
-    }
-    else if(upperCase && !numberspecialChar && !lowerCase )
-    {
-        password=randomPassword(charPass.upperCase,num)
-    }
-    else if (!upperCase && numberspecialChar && !lowerCase)
-    {
-        password=randomPassword(charPass.numberspecialChar,num)
-    }
-    else if(upperCase && numberspecialChar && lowerCase)
-    {
-        password = randomPassword(charPass.lowerCase + charPass.upperCase + charPass.numberspecialChar,num)
-    }
-    else if (lowerCase && upperCase && !numberspecialChar)
-    {
-        password = randomPassword(charPass.lowerCase + charPass.upperCase,num)
-    }
-    else if(numberspecialChar && lowerCase && !upperCase){
-        password = randomPassword(charPass.numberspecialChar + charPass.lowerCase,num)
-    }
-    else if(numberspecialChar && !lowerCase && upperCase)
-    {
-        password = randomPassword(charPass.upperCase + charPass.numberspecialChar,num)
-    }
-    else
-    {
-        confirmPass();
-    } 
-        return (textArea.value) = password;
-};
+    let numbers = confirm(`Any Numbers to be included in your password?`);
+    let specialChar = confirm(`What about Special Characters?`)
+
+    let possibleChar = ``;
+
+    if (lowerCase)
+        {
+        possibleChar = possibleChar + charPass.lowerCase
+        }
+    if (upperCase) 
+        {
+        possibleChar= possibleChar + charPass.upperCase
+        }
+    if (numbers) 
+        {
+        possibleChar= possibleChar + charPass.numbers
+        }
+    if (specialChar) 
+        {
+        possibleChar= possibleChar + charPass.specialChar
+        }
+    if (!lowerCase && !upperCase && !numbers && !specialChar)
+        {
+            confirmPass();
+        }
+    password = randomPassword(possibleChar,num)
+            return (textArea.value) = password;
+    };
+  
     
 function randomPassword(charPass,num) {
   
     let str = ``;
-    while (str.length < num) {
-       str += charPass[Math.floor(Math.random() * charPass.length)];
-    }
+    while (str.length < num)
+     {
+     str += charPass[Math.floor(Math.random() * charPass.length)];
+     }
     return str;
 };
 
