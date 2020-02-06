@@ -17,11 +17,15 @@ Responsive Password Generator
 
 ![Responsive Password Generator](https://user-images.githubusercontent.com/48987979/67943584-36a50880-fbd2-11e9-9110-39dd7d5b006e.gif)
 
+## [Live Preview ](https://simonadulgheru.github.io/Password-Generator/)
 
 
 Stack used
+- Html
+- CSS
+- Javascript
 
-Html CSS and Javascript
+
 
 
 
